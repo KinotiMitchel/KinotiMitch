@@ -1,0 +1,18 @@
+class ShapesCalculator:
+    def __init__(self):
+        self.length = 0   # Initialize length to 0
+        self.width = 0    # Initialize width to 0
+        self.area = 0     # Initialize area to 0
+
+    def get(self):
+        self.length = int(input("Enter the length: "))  # Read the length from the user
+        self.width = int(input("Enter the width: "))    # Read the width from the user
+
+    def calculate_area(self):
+        self.area = self.length * self.width  # Calculate the area
+        print("The result is", self.area)    # Display the calculated area
+
+if __name__ == "__main__":
+    area = ShapesCalculator()  # Create an instance of ShapesCalculator
+    area.get()                  # Get dimensions from the user
+    area.calculate_area()       # Calculate and display the area
