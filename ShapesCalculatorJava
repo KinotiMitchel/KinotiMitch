@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+class ShapesCalculator {
+    private int length;  // Private instance variables to store length, width, and area
+    private int width;
+    private int area;
+   
+    public void get() {
+        Scanner scanner = new Scanner(System.in);  // Create a Scanner object to read input
+        System.out.println("Enter the length:");
+        length = scanner.nextInt();  // Read and store the length from user input
+        System.out.println("Enter the width:");
+        width = scanner.nextInt();   // Read and store the width from user input
+    }
+   
+    public void calculateArea() {
+        area = length * width;  // Calculate the area using the stored length and width
+        System.out.println("The result is " + area);  // Display the calculated area
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        ShapesCalculator shape = new ShapesCalculator();  // Create an instance of ShapesCalculator
+        shape.get();  // Call the get() method to input dimensions
+        shape.calculateArea();  // Call the calculateArea() method to calculate and display area
+    }
+}
